@@ -11,5 +11,8 @@ export class TestComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  onclick(v)
+  {
+    console.log(v);
+  }
 }
