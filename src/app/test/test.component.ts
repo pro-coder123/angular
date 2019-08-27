@@ -1,4 +1,4 @@
-import { Component, OnInit , Input } from '@angular/core';
+import { Component, OnInit , Input , Output , EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-test',
@@ -8,11 +8,18 @@ import { Component, OnInit , Input } from '@angular/core';
 export class TestComponent implements OnInit {
 
   @Input("data") public name;
+  @Output() public chevent = new EventEmitter;
 
   constructor() { }
 
   ngOnInit() {
   }
+
+  fireevent()
+  {
+    this.chevent.emit("Event in test module");
+  }
+
   onclick(v)
   {
     console.log(v);
