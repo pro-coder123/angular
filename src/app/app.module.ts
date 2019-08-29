@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
 import { InsideTestComponent } from './test/inside-test/inside-test.component';
 import { ServiceService } from './service.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ServiceService } from './service.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [ServiceService],
   bootstrap: [AppComponent]
